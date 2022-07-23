@@ -4,6 +4,9 @@
 var dx		=	keyboard_check(vk_right) - keyboard_check(vk_left);
 dx			*=	xspeed;
 
+if (room == Room3 and irandom(10) != 0)
+	dx		*=	-1;
+
 if (!place_meeting(x + dx, y, obj_block))
 	x		+=	dx;
 else	{
@@ -32,7 +35,16 @@ else	{
 }
 
 angle		=	lerp(angle, -sign(yspeed) * 45, 0.1);
+
+if (irandom(10) == 0)
+	angle	=	irandom(360);
+	
 image_angle	=	angle;
+
+if (irandom(100) == 0)
+	image_xscale = -2;
+else
+	image_xscale = 1;
 
 if (y > room_height * 5)	{
 	x		=	xstart;

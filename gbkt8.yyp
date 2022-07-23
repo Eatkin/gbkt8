@@ -7,6 +7,7 @@
     {"id":{"name":"spr_balldude","path":"sprites/spr_balldude/spr_balldude.yy",},"order":0,},
     {"id":{"name":"spr_bigGiantFace","path":"sprites/spr_bigGiantFace/spr_bigGiantFace.yy",},"order":4,},
     {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},"order":0,},
+    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":3,},
     {"id":{"name":"obj_textTrigger","path":"objects/obj_textTrigger/obj_textTrigger.yy",},"order":3,},
     {"id":{"name":"spr_bigTrigger","path":"sprites/spr_bigTrigger/spr_bigTrigger.yy",},"order":3,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
@@ -37,9 +38,10 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"par_room","path":"rooms/par_room/par_room.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
-    {"roomId":{"name":"par_room","path":"rooms/par_room/par_room.yy",},},
+    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
