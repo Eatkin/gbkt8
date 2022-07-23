@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 var txt		=	"Oops piss";
 switch (room)	{
 	case (Room1):
@@ -10,6 +11,13 @@ switch (room)	{
 		break;
 	case (Room3):
 		txt =	"ReVERsed desrever ConTroLSS Slornoc someTIMeS";
+		break;
+	case (Room4):
+		show_message("Oh no BALl DuDe HAS GOT stuck and GONe The WSrong WAY");
+		show_message("He BETTER o the  Same LEVLvels BACKGRWARDS ATGAIN");
+		break;
+	case (Room6):
+		txt = "BALL DUDE GOT FAT LOOOOOOLL";
 		break;
 }
 

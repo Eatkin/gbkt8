@@ -41,18 +41,26 @@ if (irandom(10) == 0)
 	
 image_angle	=	angle;
 
-if (irandom(100) == 0)
+if (irandom(100) == 0 and room != Room6)
 	image_xscale = -2;
 else
 	image_xscale = 1;
 
 if (y > room_height * 5)	{
-	x		=	xstart;
-	y		=	ystart;
+	x			=	xstart;
+	y			=	ystart;
+	var _snd	=	audio_play_sound(france, 0, false);
+	var _shft	=	random(0.2) - 0.1;
+	audio_sound_pitch(_snd, 1 + _shft);
 }
 
-if (x > room_width)	{
+if (place_meeting(x, y, obj_end))	{
 	show_message("WOW YOU ARE THE BALL DUDE OF THE CNTRUUR YMANNNN");
 	show_message("Yoausd Go to NEXT leVLE nowwwwww!");
+	if (room == Room3)	{
+		audio_stop_all();
+		audio_play_sound(ICK_FX___AbHoRrEnT___10_teerrrbilll__Ball_Dude_Adventures_Soundtrack_, 0, true);
+	}
+	
 	room_goto_next();
 }
