@@ -27,6 +27,18 @@ switch (room)	{
 	case (Room7):
 		txt = "Oh no it's the buggy level";
 		break;
+		
+	case (Room9):
+		if ((current_day == 29 and current_month == 7 and current_year == 2022) or global.edmode)
+			show_message("wELCOME TO the secret day 1 dlc level");
+		else	{
+			show_message("This level is only available for players playing on Day 1 of the GBTK8 jam.");
+			show_message("It's really good");
+			show_message("You should definitely go out of your way to set your system clock to the 29th July 2022");
+			show_message("Because it'll be totally worth coming back to see this amazing level");
+			room_goto_next();
+		}
+		break;
 }
 
 var _obj	=	instance_create_layer(0 ,0, layer, obj_text);

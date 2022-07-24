@@ -9,7 +9,7 @@ if (room == Room3 and irandom(10) != 0)
 
 
 if (!place_meeting(x + dx, y, obj_block))
-	x		+=	dx;
+	x		+=	dx * 0.5;
 else	{
 	while (!place_meeting(x + sign(dx), y, obj_block))
 		x	+=	sign(dx);
@@ -21,7 +21,7 @@ else	{
 yspeed		+=	grav;
 
 if (!place_meeting(x, y + yspeed, obj_block))
-	y		+=	yspeed;
+	y		+=	yspeed * 0.5;
 else	{
 	while (!place_meeting(x, y + sign(yspeed), obj_block))
 		y	+=	sign(yspeed);
@@ -37,7 +37,7 @@ else	{
 
 //Cow blocks
 if (!place_meeting(x + dx, y, obj_cowBlock))
-	x		+=	dx;
+	x		+=	dx * 0.5;
 else	{
 	while (!place_meeting(x + sign(dx), y, obj_cowBlock) and irandom(1) != 0)
 		x	+=	sign(dx);
@@ -49,14 +49,11 @@ else	{
 		x	-=	dx * 120;
 }
 
-if (room == Room7)	{
-	yspeed		+=	grav;
-	if (irandom(100) == 0)
-		yspeed -= grav * 3;
-}
+if (room == Room7 and irandom(100) == 0)
+	yspeed -= grav * 3;
 	
 if (!place_meeting(x, y + yspeed, obj_cowBlock))
-	y		+=	yspeed;
+	y		+=	yspeed * 0.5;
 else	{
 	while (!place_meeting(x, y + sign(yspeed), obj_cowBlock) and irandom(1) != 0)
 		y	+=	sign(yspeed);
