@@ -6,3 +6,6 @@ angle			=	0;
 xspeed			=	10;
 yspeed			=	0;
 grav			=	2;
+
+if (room == Room8)
+	sprite_index = spr_geromy;

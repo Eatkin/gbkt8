@@ -6,18 +6,26 @@ switch (room)	{
 	case (Room1):
 		txt	=	"It's the annoying character level";
 		break;
+		
 	case (Room2):
 		txt	=	"PMMMMMMMMMMMMMMEEEEEEEEEE";
 		break;
+		
 	case (Room3):
 		txt =	"ReVERsed desrever ConTroLSS Slornoc someTIMeS";
 		break;
+		
 	case (Room4):
 		show_message("Oh no BALl DuDe HAS GOT stuck and GONe The WSrong WAY");
 		show_message("He BETTER o the  Same LEVLvels BACKGRWARDS ATGAIN");
 		break;
+		
 	case (Room6):
 		txt = "BALL DUDE GOT FAT LOOOOOOLL";
+		break;
+	
+	case (Room7):
+		txt = "Oh no it's the buggy level";
 		break;
 }
 

@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 //This is just to preload music
-if (!audio_is_playing(ICK_FX___AbHoRrEnT___06_PluMmEr_bOi__feat__Ludwig_Dementgenstein_))
-	music	=	audio_play_sound(ICK_FX___AbHoRrEnT___06_PluMmEr_bOi__feat__Ludwig_Dementgenstein_, 0, true);
+if (!audio_is_playing(BD2Theme_v1))
+	music	=	audio_play_sound(BD2Theme_v1, 0, true);
 else	{
 	room_goto(Room1);
 }

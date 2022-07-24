@@ -24,5 +24,5 @@ if (keyboard_check(vk_control))	{
 	show_message("Poo poo poo poo po");
 	show_message("If you read this you are a bit stupid tool");
 	show_message("Yes yes yes yes yes okay continue now");
-	room_goto_next();
+	room_goto(room_last);
 }
