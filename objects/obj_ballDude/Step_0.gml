@@ -20,9 +20,12 @@ else	{
 
 yspeed		+=	grav;
 
+var bounced	=	false;
+
 if (!place_meeting(x, y + yspeed, obj_block))
 	y		+=	yspeed * 0.5;
 else	{
+	bounced	=	true;
 	while (!place_meeting(x, y + sign(yspeed), obj_block))
 		y	+=	sign(yspeed);
 	
@@ -55,6 +58,8 @@ if (room == Room7 and irandom(100) == 0)
 if (!place_meeting(x, y + yspeed, obj_cowBlock))
 	y		+=	yspeed * 0.5;
 else	{
+	bounced	=	true;
+	
 	while (!place_meeting(x, y + sign(yspeed), obj_cowBlock) and irandom(1) != 0)
 		y	+=	sign(yspeed);
 			
@@ -70,6 +75,13 @@ else	{
 	yspeed *= random(1);
 }
 
+if (bounced)	{
+	var snd		=	choose(a, ba, bow, camera, do0, gya, k, loo, ten, tha);
+	var pitch	=	1 + random(0.3) - 0.15;
+	snd			=	audio_play_sound(snd, 0, false);
+	audio_sound_pitch(snd, pitch);
+}
+
 angle		=	lerp(angle, -sign(yspeed) * 45, 0.1);
 
 if (irandom(10) == 0)
@@ -77,10 +89,12 @@ if (irandom(10) == 0)
 	
 image_angle	=	angle;
 
-if (irandom(100) == 0 and room != Room6)
-	image_xscale = -2;
-else
-	image_xscale = 1;
+if (room != Room6)	{
+	if (irandom(100) == 0)
+		image_xscale = -2;
+	else
+		image_xscale = 1;
+}
 
 if (y > room_height * 5)	{
 	x			=	xstart;
@@ -90,26 +104,7 @@ if (y > room_height * 5)	{
 	audio_sound_pitch(_snd, 1 + _shft);
 }
 
-if (place_meeting(x, y, obj_end))	{
-	audio_play_sound(ouais, 0, false);
-	show_message("WOW YOU ARE THE BALL DUDE OF THE CNTRUUR YMANNNN");
-	show_message("Yoausd Go to NEXT leVLE nowwwwww!");
-	if (room == Room3)	{
-		audio_stop_all();
-		audio_play_sound(ICK_FX___AbHoRrEnT___06_PluMmEr_bOi__feat__Ludwig_Dementgenstein_, 0, true);
-	}
-	
-	if (room == Room7)	{
-		audio_stop_all();
-		audio_play_sound(ICK_FX___AbHoRrEnT___10_teerrrbilll__Ball_Dude_Adventures_Soundtrack_, 0, true);
-		show_message("BALl DUde Commencinges ON tO THE next LEVEL TO COMMence his EPiiC adventure.");
-		show_message(";BaLL DUDE meets a new character called BALL fELLA");
-		show_message("Ball Dude unfortunately DIED OF  a jello OVERDOSE");
-		show_message("SO NOW h E Won't be in the GAME ANYMORE AND instead");
-		show_message("You will pla y as GEROMYfrom Sweet Bro and Hella Jeff");
-		show_message("Oh btW BAll FElla also died of chlamidia");
-	}
-	
+if (place_meeting(x, y, obj_end))	{	
 	room_goto_next();
 }
 

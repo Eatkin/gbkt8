@@ -5,7 +5,7 @@ var cx					=	camera_get_view_x(cam);
 var cy					=	camera_get_view_y(cam);
 
 //Parallax increases as we go further on
-var parallaxStrength	=	room;
+var parallaxStrength	=	room * 2;
 
 var px					=	cx * parallaxStrength * 0.1;
 var py					=	cy * parallaxStrength * 0.1;

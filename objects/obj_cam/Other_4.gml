@@ -39,6 +39,10 @@ switch (room)	{
 			room_goto_next();
 		}
 		break;
+		
+	case (Room11):
+		show_message("TUTORIAL LEVEL");
+		break;
 }
 
 var _obj	=	instance_create_layer(0 ,0, layer, obj_text);
