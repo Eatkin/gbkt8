@@ -8,7 +8,7 @@ switch (room)	{
 		break;
 		
 	case (Room2):
-		txt	=	"PMMMMMMMMMMMMMMEEEEEEEEEE";
+		txt	=	"HINT GO UP THE TOP PATH";
 		break;
 		
 	case (Room3):
@@ -41,6 +41,7 @@ switch (room)	{
 		break;
 		
 	case (Room11):
+		txt	=	"TUTORIAL LEVEL";
 		show_message("TUTORIAL LEVEL");
 		break;
 }

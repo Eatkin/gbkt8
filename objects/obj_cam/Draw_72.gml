@@ -5,10 +5,10 @@ var cx					=	camera_get_view_x(cam);
 var cy					=	camera_get_view_y(cam);
 
 //Parallax increases as we go further on
-var parallaxStrength	=	room * 2;
+var parallaxStrength	=	room;
 
-var px					=	cx * parallaxStrength * 0.1;
-var py					=	cy * parallaxStrength * 0.1;
+var px					=	cx * parallaxStrength * 0.2;
+var py					=	cy * parallaxStrength * 0.2;
 
 draw_sprite_tiled(spr_background, 0, px, py);
 
