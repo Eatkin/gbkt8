@@ -9,3 +9,6 @@ grav			=	2;
 
 if (room == Room8 or room == Room9)
 	sprite_index = spr_geromy;
+	
+if (room == Room13)
+	sprite_index = spr_bary;

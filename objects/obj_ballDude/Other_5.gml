@@ -39,4 +39,12 @@ if (room == Room11)	{
 	audio_play_sound(narration, 0, false);
 }
 
+if (room == Room12)	{
+	show_message("Ball Dude has TUrned inTO Bary the Wizard!");
+	show_message("This is my original character and not stolen");
+	show_message("I will sue you if you try use BaRY th e qizard ans you r own");
+	show_message("BO BAry");
+	audio_play_sound(narration2, 0, false);
+}
+
 audio_play_sound(ouais, 0, false);
