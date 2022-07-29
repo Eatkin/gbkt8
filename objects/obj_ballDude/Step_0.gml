@@ -104,8 +104,18 @@ if (y > room_height * 5)	{
 	audio_sound_pitch(_snd, 1 + _shft);
 }
 
-if (place_meeting(x, y, obj_end))	{	
-	room_goto_next();
+if (place_meeting(x, y, obj_end))	{
+	if (room_exists(room_next(room)))
+		room_goto_next();
+	else	{
+		show_message("You have beaten the game and now you OWN EVERYTHING");
+		show_message("Congratulations, you can now play the game in challenge mode!");
+		repeat (100)
+			instance_create_layer(irandom(room_width), irandom(room_height), layer, obj_ant);
+		instance_destroy(obj_end);
+		x		=	xstart;
+		y		=	ystart;
+	}
 }
 
 

@@ -9,6 +9,7 @@ music	=	-1;
 text	=	"Click";
 
 global.edmode = true;
+global.edmode = false;
 
 if (global.edmode)
 	show_message("Ed mode enabled, make sure you disable this before releasing");

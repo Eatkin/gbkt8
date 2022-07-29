@@ -12,3 +12,6 @@ if (room == Room8 or room == Room9)
 	
 if (room == Room13)
 	sprite_index = spr_bary;
+	
+if (room == Room15)
+	sprite_index = spr_justwall;

@@ -47,4 +47,16 @@ if (room == Room12)	{
 	audio_play_sound(narration2, 0, false);
 }
 
+if (room == Room13)	{
+	show_message("OopppS Game Machine broke");
+	show_message("HAVE a nice DAy");
+	show_message("Also Ant's face is going to kill you");
+	audio_play_sound(_4secondamazing_LOOP_V1, 0, true);
+}
+
+if (room == Room14)	{
+	show_message("It's the last level because I can't be btohered to make any more ");
+	audio_play_sound(_4secondamazing_LOOP_V1, 0, true);
+}
+
 audio_play_sound(ouais, 0, false);
