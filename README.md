@@ -108,3 +108,7 @@ Level 7 is only accessible if you play on release day, the 29th July 2022. Or yo
 The cow blocks are the [worst, buggiest blocks in the game](https://github.com/Eatkin/gbkt8/blob/main/objects/obj_ballDude/Step_0.gml#L58-76). Hitting them horizontally gives a random chance of bouncing you away at high speed. Hitting them vertically randomises your rebound velocity.
 
 Obviously I made some levels completely out of cow blocks. Pretty cool.
+
+### Commit Messages
+
+Commit messages are all deliberately meaningless, sourced from [What the Commit](https://whatthecommit.com/).
